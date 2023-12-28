@@ -1,10 +1,12 @@
+import random
+
 # list of colors
 colors=["red","blue","purple","orange","white","pink","green"]
 # here is our guesses
 guess=[]
 temp=""
 # here g is our tracker 
-g=[1,2,3,4,5]
+g=["  ","  ","  ","  ","  "]
 # checking
 correct="white"
 needs_to_be_corrected="red"
@@ -27,8 +29,10 @@ while g!=["white","white","white","white","white"]:
     for index,(value1,value2) in enumerate(zip(code,guess)):
        if value1==value2:
           g[index]="white"
-
+          
+    random.shuffle(g)
     print(g)
+
 if g==["white","white","white","white","white"]:
    print("YAY")
 

@@ -1,1 +1,0 @@
-CREATE database python_db;
